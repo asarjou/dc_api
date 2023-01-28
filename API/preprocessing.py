@@ -6,12 +6,12 @@ def preprocess_json(response_data):
     df = pd.DataFrame(response_data)
     df.to_csv('audit.csv')
 
-    try:
-        validate_df(df=df)
-        df = df[df['Company'] == 'HABITAT ENERGY LIMITED'] #only interested in Habitat Energy results
-    except: #if there are none then check outputs
-        df.to_csv('output.csv')
-        raise
+#    try:
+#        validate_df(df=df)
+##        df = df[df['Company'] == 'HABITAT ENERGY LIMITED'] #only interested in Habitat Energy results
+#    except: #if there are none then check outputs
+#        df.to_csv('output.csv')
+#        raise
     
     df = df[['_id', 'Company', 'Unit Name', 'EFA Date', 'Delivery Start', 'Delivery End', 'EFA', 'Service', 'Cleared Volume', 'Clearing Price', 'Technology Type', 'Location', 'Cancelled']]
     df.columns = ['id', 'Company', 'unit_name', 'EFA_date', 'delivery_start', 'delivery_end', 'EFA', 'service', 'cleared_volume', 'clearing_price', 'technology_type', 'Location', 'Cancelled']

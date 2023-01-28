@@ -6,7 +6,7 @@ class MakeConnection():
 
     def connect(self):
 
-        engine = create_engine('sqlite:///habitatdb/habitat_dc.db', echo=False) #type and name of created sqlite db
+        engine = create_engine('sqlite:///dcdb/dc.db', echo=False) #type and name of created sqlite db
 
         return engine
 
