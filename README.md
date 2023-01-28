@@ -1,5 +1,4 @@
 Author: Arman Sarjou
-Date: 08th Jan 2023
 
 This directory contains the necessary Python files to read the Dynamic Containment Auction results (via API) and saving the current day's result to a local database.
 
